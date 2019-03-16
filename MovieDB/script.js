@@ -28,3 +28,4 @@ for(var i =0 ;i < movieDB.length; i++)
     res+=movieDB[i].Rating + " stars";
     console.log(res);
 } 
+
