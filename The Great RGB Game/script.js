@@ -18,6 +18,7 @@ var hardbtn = document.querySelector('#hardbtn');
 var easybtn = document.querySelector('#easybtn');
 
 hardbtn.addEventListener('click',function(){
+	reset();
 	hardbtn.classList.add("selected");
 	easybtn.classList.remove("selected");
 
@@ -34,6 +35,7 @@ hardbtn.addEventListener('click',function(){
 });
 
 easybtn.addEventListener('click',function(){
+	reset();
 	easybtn.classList.add("selected");
 	hardbtn.classList.remove("selected");
 	numSquares = 3;
@@ -49,7 +51,8 @@ easybtn.addEventListener('click',function(){
 	}
 
 });
-newcolor.addEventListener('click',function(){
+function reset()
+{
 	colors = changeColors(numSquares);
 	pickedColor = pickRandom();
 	for(var i=0;i<squares.length;i++)
@@ -60,7 +63,8 @@ newcolor.addEventListener('click',function(){
 	rgbhead.textContent = pickedColor;
 	mainhead.style.background = "steelblue";
 	statusId.textContent = "";
-});
+}
+newcolor.addEventListener('click',reset);
 
 pickedColor = pickRandom();
 rgbhead.textContent = pickedColor;
