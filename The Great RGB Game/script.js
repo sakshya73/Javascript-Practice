@@ -10,6 +10,20 @@ var statusId = document.querySelector("#status");
 
 var mainhead = document.querySelector('.heading');
 
+var newcolor = document.querySelector('#newcolors');
+
+newcolor.addEventListener('click',function(){
+	colors = changeColors(6);
+	pickedColor = pickRandom();
+	for(var i=0;i<squares.length;i++)
+	{
+		squares[i].style.background = colors[i];
+	}
+	rgbhead.textContent = pickedColor;
+	mainhead.style.background = "#232323";
+	statusId.textContent = "";
+});
+
 pickedColor = pickRandom();
 rgbhead.textContent = pickedColor;
 for(var i=0;i<squares.length;i++)
@@ -19,6 +33,7 @@ for(var i=0;i<squares.length;i++)
 		clickedColor = this.style.background;
 		if(pickedColor === clickedColor)
 		{
+			newcolor.textContent = "Play Again?";
 			statusId.textContent = "Correct";
 			mainhead.style.background = pickedColor;
 			setAllColors(pickedColor);

@@ -1,17 +1,22 @@
 body{
 	background-color: #232323;
 }
-span{
-	color: white;
-}
 h1{
 	color: white;
+}
+#newcolors{
+	font-size: 18px;
 }
 .container{
 	max-width: 600px;
 	margin: 0 auto;
 }
-
+#stripe{
+	background-color: white;
+	color: black;
+	text-align: center;
+	height: 30px;
+}
 
 .square{
 	width: 30%;
