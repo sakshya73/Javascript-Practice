@@ -56,8 +56,9 @@ newcolor.addEventListener('click',function(){
 	{
 		squares[i].style.background = colors[i];
 	}
+	this.textContent = "New Colors";
 	rgbhead.textContent = pickedColor;
-	mainhead.style.background = "#232323";
+	mainhead.style.background = "steelblue";
 	statusId.textContent = "";
 });
 
